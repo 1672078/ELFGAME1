@@ -20,8 +20,8 @@ font_data = ExtResource( 5 )
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.670588, 0.231373, 0.231373, 1 )
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.129412, 0.282353, 0.227451, 1 )
 
 [sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 5 )
@@ -31,7 +31,7 @@ default_font = SubResource( 6 )
 Label/colors/font_color = Color( 0.129412, 0.843137, 0.364706, 1 )
 Label/fonts/font = SubResource( 3 )
 Label/styles/normal = SubResource( 4 )
-Panel/styles/panel = SubResource( 5 )
+Panel/styles/panel = SubResource( 8 )
 
 [node name="Tittle" type="Node2D"]
 

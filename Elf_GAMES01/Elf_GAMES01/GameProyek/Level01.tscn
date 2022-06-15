@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://TileSetPadat.tres" type="TileSet" id=1]
 [ext_resource path="res://asset/Elf_Jalan/2.png" type="Texture" id=2]
@@ -36,6 +36,7 @@
 [ext_resource path="res://asset/Color/1.png" type="Texture" id=34]
 [ext_resource path="res://asset/Elf_Terluka/1.png" type="Texture" id=35]
 [ext_resource path="res://asset/Elf_Terluka/2.png" type="Texture" id=36]
+[ext_resource path="res://MobileControl.tscn" type="PackedScene" id=37]
 
 [sub_resource type="RectangleShape2D" id=55]
 extents = Vector2( 64.5, 15.5 )
@@ -52,6 +53,21 @@ animations = [ {
 "name": "Terluka",
 "speed": 12.02
 }, {
+"frames": [ ExtResource( 35 ) ],
+"loop": false,
+"name": "Mati",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 2 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Lari_Cepat",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 2 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Lari",
+"speed": 12.0
+}, {
 "frames": [ ExtResource( 20 ) ],
 "loop": false,
 "name": "Jatuh",
@@ -61,21 +77,6 @@ animations = [ {
 "loop": false,
 "name": "Lompat",
 "speed": 12.0
-}, {
-"frames": [ ExtResource( 35 ) ],
-"loop": false,
-"name": "Mati",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 2 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "Lari",
-"speed": 12.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 2 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "Lari_Cepat",
-"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -399,6 +400,8 @@ margin_bottom = 25.375
 text = "0
 "
 align = 1
+
+[node name="Mobile_Control" parent="." instance=ExtResource( 37 )]
 
 [connection signal="hero_apdet_health" from="Hero" to="." method="_on_Hero_hero_apdet_health"]
 [connection signal="hero_apdet_koin" from="Hero" to="." method="_on_Hero_hero_apdet_koin"]
