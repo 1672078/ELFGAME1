@@ -1,6 +1,6 @@
-extends VBoxContainer
+extends CanvasLayer
 
-
+onready var setting_menu = $Setting
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -15,6 +15,11 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func _on_playbutton1_pressed():
+	get_tree().change_scene("res://Level01.tscn")
 
 func _on_playbutton2_pressed():
-	get_tree().change_scene("res://Level01.tscn")
+	setting_menu.popup_centered()
+
+func _on_playbutton3_pressed():
+	get_tree().quit()

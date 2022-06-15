@@ -11,11 +11,13 @@ config_version=4
 [application]
 
 config/name="GameProyek"
+run/main_scene="res://Tittle.tscn"
 config/icon="res://asset/icon.png"
 
 [autoload]
 
 Music="*res://asset/music/music.tscn"
+Save="*res://save/save.gd"
 GlobalSetting="*res://asset/global_setting.gd"
 
 [display]
@@ -95,4 +97,3 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 quality/driver/driver_name="GLES2"
-environment/default_environment="res://asset/default_env.tres"
