@@ -98,7 +98,6 @@ align = 1
 valign = 1
 
 [node name="Setting" parent="CanvasLayer" instance=ExtResource( 7 )]
-visible = false
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/playbutton1" to="CanvasLayer" method="_on_playbutton1_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/playbutton2" to="CanvasLayer" method="_on_playbutton2_pressed"]
